@@ -12,6 +12,12 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        triangle: "url('/images/bg-triangle.svg')",
+        pentagon: "url('/images/bg-pentagon.svg')",
+      },
+      boxShadow: {
+        "game-btn":
+          "inset 0px 4px 2px 0px rgba(0,0,0, 0.25), 3px 3px 2px 0px rgba(0,0,0,0.25)",
       },
       fontFamily: {
         sans: ["Barlow Semi Condensed", "sans-serif"],
@@ -44,6 +50,9 @@ const config: Config = {
         "dark-text": "hsl(229, 25%, 31%)",
         "score-text": "hsl(229, 64%, 46%)",
         "header-outline": "hsl(217, 16%, 45%)",
+      },
+      aspectRatio: {
+        triangle: "313/278",
       },
     },
   },
