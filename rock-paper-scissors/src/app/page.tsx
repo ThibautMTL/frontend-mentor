@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Sign } from "@/components/ui/sign";
 import _ from "lodash";
 import useGameLogic from "@/hook/useLogicalGame";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import Image from "next/image";
 
 export default function Home() {
   const {
@@ -119,9 +126,28 @@ export default function Home() {
       )}
 
       {/* CTA */}
-      <Button variant="outline" className="px-8 py-1 uppercase opacity-75">
-        Rules
-      </Button>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button variant="outline" className="px-8 py-1 uppercase opacity-75">
+            Rules
+          </Button>
+        </DialogTrigger>
+        <DialogContent className="p-6 w-screen h-screen sm:max-w-md">
+          <div className="flex flex-col items-center justify-evenly">
+            <h1 className="uppercase text-dark-text text-[40px]">rules</h1>
+            <div className="relative w-full aspect-rules">
+              <Image
+                src="/images/image-rules.svg"
+                alt="rules of game"
+                fill={true}
+                sizes="calc(100% - 3rem)"
+                className="object-contain"
+              ></Image>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <div className="absolute bottom-0 text-header-outline text-[10px]">
         Challenge by{" "}
         <a

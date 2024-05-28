@@ -1,3 +1,4 @@
+import { rule } from "postcss";
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -131,6 +132,7 @@ const config = {
       },
       aspectRatio: {
         triangle: "313/278",
+        rules: "152/135",
       },
     },
   },
